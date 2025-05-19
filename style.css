@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ae9cff;
+}
+
+
+.container {
+    background-color: rgb(255, 255, 255);
+    width: 140vmin;
+    height: 70vmin;
+    margin: 15vmin auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(33, 32, 32, 0.2);
+}
+
+.container .text_container {
+    margin: 0vmin 5vmin 0vmin 30vmin;
+    padding-top: 6vmin;
+    /* background-color: transparent; */
+
+
+}
+
+.container .text_container .search-bar {
+    margin-right: 5vmin;
+    width: 70vmin;
+    height: 5vmin;
+    box-shadow: 0 4px 8 px rgba(33, 32, 32, 0.2);
+    border: none;
+    outline: none;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.4s ease;
+
+}
+
+.container .text_container .search-bar:focus {
+    border-bottom: 3px solid #ae9cff;
+
+}
+
+
+.container .text_container .search-button {
+    width: 10vmin;
+    height: 5vmin;
+    background-color: #ae9cff;
+    border-radius: 5px;
+    box-shadow: 0 20px 40px rgba(33, 32, 32, 0.2);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.container .text_container .search-button:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.container .text_container .search-bar::placeholder {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+
+}
