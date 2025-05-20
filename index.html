@@ -8,33 +8,22 @@
     <title>Franklin's Main</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <script src='main.js'></script>
 </head>
 
 <body>
+    <audio id="sound"></audio>
     <div class="container">
         <div class="text_container">
-            <input type="text" placeholder="Type a word here..." class="search-bar">
-            <input type="button" value="Search" name="Search" class="search-button">
-
+            <input type="text" placeholder="Type a word here..." class="search-bar" id="input-word">
+            <!-- <input type="button" value="Search" name="Search" class="search-button" id="search_button"> -->
+            <button id="search_button" class="search-button">Search</button>
         </div>
 
-        <div class="definition">
-            <h3 class="heading">Sample</h3>
-            <button class="audio-button"><i class="fa-solid fa-headphones"></i></button>
-            <p class="result"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, corporis! Enim fugiat
-                mollitia
-                assumenda ad. Iure vitae explicabo, recusandae magni expedita blanditiis nulla sed unde corporis atque
-                perferendis alias dolorum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore ipsam, quae
-                dicta consectetur sequi, id sunt, quos sit autem iste voluptatum. Voluptates tempore et odit
-                voluptatibus praesentium temporibus explicabo deleniti. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Quam blanditiis beatae, aperiam consectetur dolorum numquam pariatur in recusandae
-                aliquam cupiditate dolore voluptate! Assumenda, veritatis repellendus nobis labore ipsam architecto
-                optio!</p>
+        <div class="definition" id="definition_result">
 
         </div>
     </div>
-
+    <script src='main.js'></script>
 </body>
 
 </html>
