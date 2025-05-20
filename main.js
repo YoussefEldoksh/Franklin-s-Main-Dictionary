@@ -41,8 +41,7 @@ button.addEventListener("click", () => {
                 <h3 class="heading">${input_word}</h3>
                 ${audioUrl ? `<button class="audio-button" id="audio-button"><i class="fa-solid fa-headphones"></i></button>` : `<p>No pronunciation audio available, using text-to-speech.</p>`}
                 <p class="partOfSpeech">${data[0].fl || "N/A"} ${data[0].hwi?.prs?.[0]?.mw || ""}</p>
-                <p class="result">${data[0].shortdef?.[0] || "No definition available"}</p>
-                <p class="example">${example_sentence}</p>
+                <p class="result">${data[0].shortdef?.[0] && data[0].shortdef?.[1] ? data[0].shortdef[0] + ", " + data[0].shortdef[1] : data[0].shortdef?.[0] || "No definition available"}</p>                <p class="example">${example_sentence}</p>
             `;
 
             if (audioUrl) {
