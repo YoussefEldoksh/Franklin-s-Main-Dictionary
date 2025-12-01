@@ -9,14 +9,12 @@ button.addEventListener("click", () => {
         return;
     }
 
-    console.log(input_word);
     fetch(`/api/dictionary/${input_word}`)
         .then((response) => {
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             return response.json();
         })
         .then((data) => {
-            console.log(data);
             if (!data[0] || data[0].meta === undefined) {
                 result.innerHTML = `<h3 class="Error">Sorry pal, we couldn't find definitions for the word you were looking for.</h3>`;
                 sound.removeAttribute("src");
@@ -34,8 +32,7 @@ button.addEventListener("click", () => {
 
             const audioFile = data[0].hwi?.prs?.find(p => p.sound?.audio)?.sound?.audio;
             const audioUrl = audioFile ? `https://media.merriam-webster.com/audio/pr/na/${audioFile}.mp3` : "";
-            console.log("Audio URL:", audioUrl);
-            console.log("Pronunciations:", data[0].hwi?.prs);
+
 
             result.innerHTML = `
                 <h3 class="heading">${input_word}</h3>
@@ -81,7 +78,6 @@ button.addEventListener("click", () => {
                     window.speechSynthesis.speak(utterance);
                 });
             }
-            console.log(sound);
         })
         .catch((error) => {
             console.error("Fetch error:", error);

@@ -36,7 +36,6 @@ app.get('/api/dictionary/:word', async (req, res) => {
         }
 
         const data = await response.json();
-        console.log('API Response data:', data);
         res.json(data);
     } catch (error) {
         console.error('Detailed error:', error);
