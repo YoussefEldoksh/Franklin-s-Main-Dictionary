@@ -57,6 +57,6 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-    console.log('Test the server by visiting: http://localhost:3000/test');
+    console.log(`Server running at http://0.0.0.0:${port}`);
+    console.log('Test the server by visiting: http://0.0.0.0:3000/test');
 }); 

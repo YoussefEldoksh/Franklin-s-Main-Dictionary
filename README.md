@@ -57,6 +57,12 @@ After `npm start`, open your browser to `http://localhost:3000` (or the port ind
 - **Author**: Project owner `YoussefEldoksh`
 
 ---
-If you want, I can also:
-- add a sample dataset (JSON) and a simple API endpoint to serve it,
-- or create a quick Docker Compose file for local development.
+**Image**
+- **Docker-Repo**: youssefeldoksh/frank_dictionary
+    it can be used to pull the docker image from docker hub directly
+**Deployment**
+- **Docker**: This project includes a `Dockerfile` for containerizing the app. I deployed the container successfully using google cloud.
+- **Deployed URL**:
+```
+https://frank-dictionary-992833418374.europe-west2.run.app/
+```
